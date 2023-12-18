@@ -1,0 +1,2 @@
+COPY hello / # buildkit
+CMD ["/hello"]
