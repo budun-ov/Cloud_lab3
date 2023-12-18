@@ -16,6 +16,6 @@ jobs:
         - name: Log in Docker
           run: docker login -u ${{ secrets.DOCKER_LOGIN }} -p ${{ secrets.DOCKER_PASSWORD }}
         - name: Build the Docker image
-          run: docker build . --file Dockerfile --tag budun-ov/Cloud_lab3
+          run: docker build . --file Dockerfile --tag budun-ov/cloud_lab3
         - name: Docker Push
-          run: docker push budun-ov/Cloud_lab3
+          run: docker push budun-ov/cloud_lab3
