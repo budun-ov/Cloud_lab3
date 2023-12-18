@@ -12,10 +12,9 @@ jobs:
         runs-on: ubuntu-latest
 
         steps:
-        - uses: actions/checkout@v3 // для доступа к репозиторию из .yml
+        - uses: actions/checkout@v3
         - name: Log in Docker
           run: docker login -u ${{ secrets.DOCKER_LOGIN }} -p ${{ secrets.DOCKER_PASSWORD }}
-            // достаем из секретов репозитория креды для docker hub'a
         - name: Build the Docker image
           run: docker build . --file Dockerfile --tag budun-ov/Cloud_lab3
         - name: Docker Push
