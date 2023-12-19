@@ -1,3 +1,0 @@
-FROM hello-world:latest
-COPY hello / # buildkit
-CMD ["/hello"]
