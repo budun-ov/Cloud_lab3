@@ -8,9 +8,9 @@ jobs:
         runs-on: ubuntu-latest
         steps:
         - uses: actions/checkout@v3
-        - name: Log in Docker
+        - name: Login Docker
           run: docker login -u ${{ secrets.DOCKER_LOGIN }} -p ${{ secrets.DOCKER_PASSWORD }}
-        - name: Build the Docker image
+        - name: Build image
           run: docker build . --file Dockerfile.txt --tag budunov/cloud_lab3
         - name: Docker Push
           run: docker push budunov/cloud_lab3:latest
