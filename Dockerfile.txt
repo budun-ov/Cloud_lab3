@@ -1,0 +1,7 @@
+FROM python:3.10.12
+
+RUN apt-get update && pip install matplotlib numpy
+
+COPY GCD.py ./
+
+ENTRYPOINT ["python3", "./GCD.py"]
